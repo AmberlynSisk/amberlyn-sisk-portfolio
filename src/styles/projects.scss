@@ -1,0 +1,164 @@
+.ProjectsContainer {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        padding: 50px 0;
+    }
+
+    .ProjectsHeader {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 80px 150px 0 0;
+        z-index: 5;
+
+        .ProjectsBtn {
+            align-self: right;
+            padding: 15px 30px;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            transition: 0.2s ease-in-out;
+        
+            &:hover {
+                background: #fff;
+                color: #000;
+                border: 1px solid transparent;
+            }        
+        }
+    }
+
+    .ProjectsHero {
+        z-index: 5;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: 100px;
+
+        @media screen and (max-width: 768px) {
+            padding: 100px 50px 100px 50px;
+        }
+
+        .ProjectOne {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+
+            @media screen and (max-width: 768px) {
+                width: 75%;
+            }
+        }
+
+        .ProjectTwo {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+
+            @media screen and (max-width: 768px) {
+                width: 75%;
+            }
+        }
+
+        .ProjectImg {
+            width: 70%;
+
+            @media screen and (max-width: 768px) {
+                width: 75%;
+            }
+        }
+
+        .ProjectDescription {
+            font-size: 1.3em;
+            text-align: center;
+            margin-top: 15px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1.1em;
+            }
+        }
+
+        a {
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #64E9EE;
+            margin-top: 5px;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                color: #fff;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 1em;
+            }
+        }
+
+        .ArrowLeft {
+            margin-right: 40px;
+            font-size: 2.5em;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                color: #64E9EE;
+                font-size: 2.6em;
+            }
+        }
+
+        .ArrowRight {
+            margin-left: 40px;
+            font-size: 2.5em;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                color: #64E9EE;
+                font-size: 2.6em;
+            }
+        }
+    }
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url('../components/images/stars.png') repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url('../components/images/twinkling.png') repeat top center;
+  z-index:1;
+  animation:move-twink-back 200s linear infinite;
+}

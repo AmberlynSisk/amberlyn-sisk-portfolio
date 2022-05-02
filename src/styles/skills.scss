@@ -1,0 +1,97 @@
+.SkillsContainer {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        padding: 100px 0;
+    }
+
+    .SkillsTitlesWrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        width: 80vw;
+        grid-gap: 50px; 
+        z-index: 5;
+        
+        .SkillsTitle {
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-bottom: 60px;
+            
+            @media screen and (max-width: 768px) {
+                font-size: 1.4em;
+            }
+        }
+    }
+
+    .SkillsHero {
+        width: 80vw;
+        height: calc(100% - 160px);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        height: 40%;
+        z-index: 5;
+        
+        .SkillsCol {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media screen and (max-width: 768px) {
+                padding-right: 15px;
+            }
+
+            .Skill {
+                font-size: 2rem;
+                margin-top: 30px;
+                font-weight: 700;
+                background: -webkit-linear-gradient(-45deg, #65e9ee 0%, #65e9ee 25%, #f2f2f2 50%, #65e9ee 75%, #65e9ee 100%) -31% 0;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                
+                @media screen and (max-width: 768px) {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url('../components/images/stars.png') repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url('../components/images/twinkling.png') repeat top center;
+  z-index:1;
+  animation:move-twink-back 200s linear infinite;
+}
