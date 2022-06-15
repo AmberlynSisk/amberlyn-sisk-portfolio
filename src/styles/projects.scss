@@ -8,16 +8,20 @@
     overflow: hidden;
     position: relative;
 
-    @media screen and (max-width: 768px) {
-        padding: 50px 0;
-    }
-
     .ProjectsHeader {
         width: 100%;
         display: flex;
         justify-content: flex-end;
         padding: 80px 150px 0 0;
         z-index: 5;
+
+        @media screen and (max-width: 540px) {
+            padding: 30px 20px 0 0;
+        }
+
+        @media screen and (max-height: 600px) {
+            padding: 30px 100px 0 0;
+        }
 
         .ProjectsBtn {
             align-self: right;
@@ -35,7 +39,17 @@
                 background: #fff;
                 color: #000;
                 border: 1px solid transparent;
-            }        
+            } 
+
+            @media screen and (max-width: 414px) {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+            }
+            
+            @media screen and (max-height: 600px) {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+            }
         }
     }
 
@@ -43,53 +57,52 @@
         z-index: 5;
         height: 100%;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 60px;
         color: #fff;
-        padding: 100px;
+        padding: 80px;
 
-        @media screen and (max-width: 768px) {
-            padding: 100px 50px 100px 50px;
+        @media screen and (max-width: 414px) {
+            padding: 40px;
+            grid-gap: 40px;
+            grid-template-columns: 1fr 1fr;
         }
 
-        .ProjectOne {
+        @media screen and (max-height: 600px) {
+            padding: 40px;
+            grid-gap: 40px;
+        }
+
+        .Project {
+            display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            width: 60%;
-
-            @media screen and (max-width: 768px) {
-                width: 75%;
-            }
+            width: 100%;
         }
 
-        .ProjectTwo {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 60%;
-
-            @media screen and (max-width: 768px) {
-                width: 75%;
-            }
-        }
 
         .ProjectImg {
-            width: 70%;
+            width: 100%;
+            opacity: 70%;
 
-            @media screen and (max-width: 768px) {
-                width: 75%;
+            @media screen and (max-width: 414px) {
+                height: 60%;
             }
         }
 
         .ProjectDescription {
-            font-size: 1.3em;
+            font-size: 1em;
             text-align: center;
             margin-top: 15px;
+            margin-bottom: 15px;
 
-            @media screen and (max-width: 768px) {
-                font-size: 1.1em;
+            @media screen and (max-width: 414px) {
+                font-size: .8em;
+            }
+
+            @media screen and (max-height: 600px) {
+                font-size: .9em;
             }
         }
 
@@ -105,32 +118,12 @@
                 color: #fff;
             }
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 414px) {
+                font-size: .9em;
+            }
+
+            @media screen and (max-height: 600px) {
                 font-size: 1em;
-            }
-        }
-
-        .ArrowLeft {
-            margin-right: 40px;
-            font-size: 2.5em;
-            cursor: pointer;
-            transition: 0.3s ease-in-out;
-
-            &:hover {
-                color: #64E9EE;
-                font-size: 2.6em;
-            }
-        }
-
-        .ArrowRight {
-            margin-left: 40px;
-            font-size: 2.5em;
-            cursor: pointer;
-            transition: 0.3s ease-in-out;
-
-            &:hover {
-                color: #64E9EE;
-                font-size: 2.6em;
             }
         }
     }

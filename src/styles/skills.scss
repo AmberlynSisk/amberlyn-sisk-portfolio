@@ -9,10 +9,6 @@
     overflow-x: hidden;
     position: relative;
 
-    @media screen and (max-width: 768px) {
-        padding: 100px 0;
-    }
-
     .SkillsTitlesWrapper{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -20,15 +16,33 @@
         width: 80vw;
         grid-gap: 50px; 
         z-index: 5;
+
+        @media screen and (max-width: 540px) {
+            width: 90vw;
+        }
         
         .SkillsTitle {
             color: #fff;
             font-weight: 700;
             text-transform: uppercase;
             padding-bottom: 60px;
-            
-            @media screen and (max-width: 768px) {
-                font-size: 1.4em;
+
+            @media screen and (max-width: 540px) {
+                padding-bottom: 40px;
+                font-size: 1.5em;
+            }
+
+            @media screen and (max-width: 414px) {
+                font-size: 1.3em;
+            }
+
+            @media screen and (max-width: 414px) {
+                font-size: 1em;
+            }
+
+            @media screen and (max-height: 600px) {
+                padding-bottom: 40px;
+                font-size: 1.5em;
             }
         }
     }
@@ -41,17 +55,25 @@
         grid-gap: 50px;
         height: 40%;
         z-index: 5;
+
+        @media screen and (max-width: 540px) {
+            width: 90vw;
+        }
+
+        @media screen and (max-width: 414px) {
+           grid-gap: 20px; 
+        }
+
+        @media screen and (max-width: 375px) {
+            grid-gap: 10px;
+        }
         
         .SkillsCol {
             list-style: none;
             text-align: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
-
-            @media screen and (max-width: 768px) {
-                padding-right: 15px;
-            }
+            align-items: center;   
 
             .Skill {
                 font-size: 2rem;
@@ -60,8 +82,16 @@
                 background: -webkit-linear-gradient(-45deg, #65e9ee 0%, #65e9ee 25%, #f2f2f2 50%, #65e9ee 75%, #65e9ee 100%) -31% 0;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+
+                @media screen and (max-width: 540px) {
+                    font-size: 1.3rem;
+                }
+
+                @media screen and (max-width: 414px) {
+                    font-size: 1.1em;
+                }
                 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-height: 600px) {
                     font-size: 1.3rem;
                 }
             }

@@ -19,7 +19,7 @@ const About = () => {
           <div className="LeftSide">
             <Roll left duration={2000}>
             <p>
-                I am a dedicated and hardworking US Army Veteran that recently found my passion in Software Development. I pride myself on my extreme attention to detail and love to experiement with code. I am currently enrolled in Bottega University's full stack coding program.
+                I am a dedicated and hardworking US Army Veteran that recently found my passion in Software Development. I pride myself on my extreme attention to detail and love to experiement with code. I graduated from Bottega University with a certificate in Full Stack Development.
             </p>
             </Roll>
           </div>
